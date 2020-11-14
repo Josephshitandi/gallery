@@ -73,6 +73,12 @@ class ImageTestClass(TestCase):
         self.new_image.delete_image()
         image = Image.objects.all()
         self.assertTrue(len(image)== 0)
+        
+    def test_update_image(self):
+        self.new_image.save_image()
+        self.new_image.update_image(self.new_image.id, 'photos/test.jpg')
+        changed_img = Image.objects.filter(image='photos/test.jpg')
+        self.assertTrue(len(changed_img) > 0)
 
     def tearDown(self):
         Location.objects.all().delete()
