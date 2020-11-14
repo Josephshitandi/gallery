@@ -12,6 +12,9 @@ class Location(models.Model):
     
 class Category(models.Model):
     name = models.CharField(max_length=60)
+    
+    def save_category(self):
+        self.save()
 class Image(models.Model):
     image = CloudinaryField('image')
     name = models.CharField(max_length=60)
