@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Gallery</title>
-</head>
-<body>
-    <p>Welcome to my Gallery. A place to review recent experience</p>
-    <div class="footer">
 
-    </div>
-</body>
-</html>
+{%extends 'base.html'%}
+{% load bootstrap3 %}
+{% block content %}
+{{ block.super}}
+<div class="">
+
+    <p>Welcome to my Gallery. A place to review recent experience</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia <br>
+        doloribus eius fugiat saepe aperiam doloremque nemo! Excepturi est non voluptatibus. <br>
+        Error molestiae optio dolores veniam qui ab repudiandae ipsam molestias.</p>
+    p
+</div>
+{% endblock %}
