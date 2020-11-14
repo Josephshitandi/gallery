@@ -22,7 +22,13 @@ class LocationTestClass(TestCase):
     def test_delete_location(self):
         self.location.delete_location()
         location = Location.objects.all()
-        self.assertTrue(len(location)== 0)        
+        self.assertTrue(len(location)== 0) 
+        
+    def test_update_location(self):
+        self.location.save_location()
+        self.location.update_location(self.location.id, 'Naivasha')
+        changed_location = Location.objects.filter(name ='Naivasha')
+        self.assertTrue(len(changed_location) > 0)       
 
         
 class CategoryTestClass(TestCase):
