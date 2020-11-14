@@ -7,6 +7,9 @@ import datetime as dt
 class Location(models.Model):
     name = models.CharField(max_length=60)
     
+    def save_location(self):
+        self.save()
+    
 class Category(models.Model):
     name = models.CharField(max_length=60)
 class Image(models.Model):
