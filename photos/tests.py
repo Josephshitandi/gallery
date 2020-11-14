@@ -52,6 +52,13 @@ class CategoryTestClass(TestCase):
         category = Category.objects.all()
         self.assertTrue(len(category)== 0)
         
+    def test_update_category(self):
+        self.category.save_category()
+        self.category.update_category(self.category.id, 'Wedding')
+        changed_category = Category.objects.filter(name ='Wedding')
+        self.assertTrue(len(changed_category) > 0)
+        
+        
 class ImageTestClass(TestCase):
 
     def setUp(self):

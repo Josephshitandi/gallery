@@ -18,8 +18,6 @@ class Location(models.Model):
         cls.objects.filter(id=id).update(name = value)
     
 class Category(models.Model):
-    # id = db.Column(db.Integer,primary_key = True)
-    # id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=60)
     
     def save_category(self):
@@ -27,6 +25,11 @@ class Category(models.Model):
         
     def delete_category(self):
         self.delete()
+        
+    @classmethod
+    def update_category(cls, id, value):
+        cls.objects.filter(id=id).update(name = value)
+        
 class Image(models.Model):
     image = CloudinaryField('image')
     name = models.CharField(max_length=60)
