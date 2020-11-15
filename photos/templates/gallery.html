@@ -3,12 +3,25 @@
 {% load bootstrap3 %}
 {% block content %}
 {{ block.super}}
-<div class="">
 
-    <p>Welcome to my Gallery. A place to review recent experience</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia <br>
-        doloribus eius fugiat saepe aperiam doloremque nemo! Excepturi est non voluptatibus. <br>
-        Error molestiae optio dolores veniam qui ab repudiandae ipsam molestias.</p>
-    p
+<!-- Looping through images   -->
+{% for image in images %}
+
+<div class="row">
+
+  <!--Display news Article images  -->
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <img src="{{image.image.url}}" class="img-responsive" alt="Image">
+  </div>
+
 </div>
+
+{% empty %}
+<div class="row">
+  <h2 class="text-center">There No Image Items</h2>
+</div>
+{% endfor %}
+
+</div>
+
 {% endblock %}
