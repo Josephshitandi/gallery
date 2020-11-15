@@ -5,4 +5,5 @@ from django.conf.urls.static import static
 
 urlpatterns =[
     path('', views.my_gallery, name = 'myGallery'),
+    path('search/', views.search_results, name='search_results'),
 ]

@@ -29,14 +29,14 @@
                         <div class="modal-body card3">
                             <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
                             <p class="text-center">{{image.description}}</p>
-                            <p class="image-location">Image Location ~ {{image.location}}</p>
-                            <p class="image-location">Image Category ~ {{image.category}}</p>
-                            <p class="image-location">Date Posted ~ {{ image.date }}</p>
+                            <p class="image-location">Location ~ {{image.location}}</p>
+                            <p class="image-location">Category ~ {{image.category}}</p>
+                            <p class="image-location">Date on ~ {{ image.date }}</p>
                         </div>
                         <div class="modal-footer">
-                            <input class="form-control input-lg" type="text" value="{{image.image.url}}"
-                                id="{{image.id}}.url">
-                            <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close
+                            <input class="form-control input-lg" type="text" value="{{image.image.url}}" id="{{image.id}}.url">
+                            <button class="btn btn-success btn-sm" onclick="copyLink('{{image.id}}.url')">Click to Copy Link</button>
+                            <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close
                             </button>
                         </div>
                     </div>
