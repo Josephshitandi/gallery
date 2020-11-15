@@ -9,9 +9,9 @@ A personal gallery application that you display my photos for others to see.
 </table>
 
 ## Demo
-Here is a working live demo : 
+Here is a working live demo : https://shitandi-gallery.herokuapp.com/
 
-Here is my figma link: 
+Here is my figma link: https://www.figma.com/file/yJZNcJkyPEznqZOgN6LMBQ/shitandi-gallery?node-id=0%3A1
 
 ## Mobile support
 Gallery is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
