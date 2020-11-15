@@ -92,8 +92,18 @@ class ImageTestClass(TestCase):
         self.new_image.update_image(self.new_image.id, 'photos/test.jpg')
         changed_img = Image.objects.filter(image='photos/test.jpg')
         self.assertTrue(len(changed_img) > 0)
+        
+    def test_get_image_by_id(self):
+        test_id = 1
+        date = dt.datetime.strptime(test_date, '%Y-%m-%d').date()
+        image_by_id = Image.days_news(date)
+        self.assertTrue(len(image_by_id) == 0)
+        
+    
 
     def tearDown(self):
         Location.objects.all().delete()
         Category.objects.all().delete()
         Image.objects.all().delete()
+        
+    
