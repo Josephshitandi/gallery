@@ -1,3 +1,34 @@
-h1{
-    color: brown;
+#formSearch {
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 1px solid white;
+}
+
+#formSearch:focus {
+    color: white;
+}
+
+.custom-btn {
+    background: transparent;
+    position: absolute;
+    right: 2%;
+}
+
+.fa-search {
+    color: orange;
+}
+
+.image-location {
+    font-style: italic;
+}
+
+.card2>img {
+    height: 250px;
+    width: 18em;
+}
+.card3>img {
+    height: 400px;
+    width: 40em;
 }

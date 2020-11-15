@@ -16,6 +16,9 @@ class Location(models.Model):
     @classmethod
     def update_location(cls, id, value):
         cls.objects.filter(id=id).update(name = value)
+        
+    def __str__(self):
+        return self.name 
     
 class Category(models.Model):
     name = models.CharField(max_length=60)
@@ -29,6 +32,9 @@ class Category(models.Model):
     @classmethod
     def update_category(cls, id, value):
         cls.objects.filter(id=id).update(name = value)
+        
+    def __str__(self):
+        return self.name 
         
 class Image(models.Model):
     image = CloudinaryField('image')
@@ -64,6 +70,7 @@ class Image(models.Model):
         image_location = Image.objects.filter(location__name=location).all()
         return image_location
   
-
+    def __str__(self):
+        return self.name 
     
     
